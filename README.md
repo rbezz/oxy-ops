@@ -118,4 +118,3 @@ Por el despliegue de cada honeypot se deberán habilitar los puertos correspondi
 - Cowrie: habilitar puerto 22 y 23 y redirigir a la ip del sensor puerto 2222 y 2323.
 - Elasticpot: habilitar puerto 9200 y redirigir a la ip del sensor puerto 9200.
 - Mailoney: habilitar puerto 25 y redirigir a la ip del sensor puerto 2525.
-- 
