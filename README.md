@@ -18,6 +18,7 @@ Para la instalación de Docker y Docker Compose siga la siguiente [guía](https:
 sudo apt-get install \
     ca-certificates \
     curl \
+    git \
     gnupg \
     lsb-release
 ```
@@ -37,13 +38,31 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
-#### Instalación de Filebeat Linux DEB
+#### Clonar Repositorio
+```
+git clone https://github.com/rbezz/oxy-ops.git
+```
+#### Instalación de Filebeat 
+##### Linux DEB
 ```
 curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.4.2-amd64.deb
 sudo dpkg -i filebeat-8.4.2-amd64.deb
 ```
-#### Instalación de Filebeat Linux RPM
+##### Linux RPM
 ```
 curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.4.2-x86_64.rpm
 sudo rpm -vi filebeat-8.4.2-x86_64.rpm
+```
+##### Reemplazar el archivo filebeat.yml
+```
+sudo cp oxy-ops/filebeat_conf/filebeat.yml /etc/filebeat/filebeat.yml
+```
+##### Copiar el certificado 
+```
+sudo cp oxy-ops/filebeat_conf/logstash-remote.crt /etc/filebeat/logstash-remote.crt
+```
+##### Iniciar y habilitar Filebeat
+```
+sudo systemctl enable filebeat
+sudo service filebeat start
 ```
