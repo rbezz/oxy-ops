@@ -12,4 +12,4 @@ Obs: Se recomienda desplegar el sensor aislado del entorno de producción.
 ## Instalación
 ### Configuración inicial
 #### Instalar Docker y Docker Compose
-Para la instalación de Docker y Docker Compose siga la siguiente [guía] https://docs.docker.com/engine/install/ de acuerdo a su sistema operativo.
+Para la instalación de Docker y Docker Compose siga la siguiente [guía] (https://docs.docker.com/engine/install/) de acuerdo a su sistema operativo.
