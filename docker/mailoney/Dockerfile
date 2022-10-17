@@ -24,4 +24,4 @@ RUN apk -U --no-cache add \
 STOPSIGNAL SIGINT
 USER mailoney:mailoney
 WORKDIR /opt/mailoney/
-CMD ["/usr/bin/python","mailoney.py","-i","0.0.0.0","-p","25","-s","mailrelay.local","-t","schizo_open_relay"]
+CMD ["/usr/bin/python","mailoney.py","-i","0.0.0.0","-p","2525","-s","mailrelay.local","-t","schizo_open_relay"]
