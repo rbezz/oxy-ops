@@ -1,8 +1,8 @@
 ![](https://www.oxyops.live/wp-content/uploads/2022/10/LOGO-HONEYPOT.png)
 
 Red de Honeypot para la detección de eventos del ciberespacio del Paraguay.
-
-Los sensores de honeypot desplegados envían los registros de los eventos al servidor (ELK) a través de filebeat.
+# Despliegue de sensores 
+Los sensores honeypot albergarán sistemas vulnerables y transmitirán los datos de registro al servidor honeypot a través de Filebeat. Estos sensores pueden ser desplegados en cualquiera de las distribuciones Linux disponibles.
 
 ## Requisitos del sistema
 La instalación pueder ser realizada en hardware real, en una máquina virtual o en la nube. 
