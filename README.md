@@ -92,7 +92,7 @@ sudo chown oxyops:oxyops -R /data
 ```
 Nuevamente se deberá ejecutar el comando docker compose up - d, la opción -d indica que se ejecutará como demonio:
 ```
-sudo docker compose up --d
+sudo docker compose up -d
 ```
 ### Instalación de honeypot (si no desea instalar todos los sensores)
 Se deberá acceder al directorio del honeypot, por ejemplo:
@@ -107,6 +107,5 @@ sudo chown oxyops:oxyops -R /data
 ```
 Nuevamente se deberá ejecutar el comando docker compose up - d, la opción -d indica que se ejecutará como demonio:
 ```
-sudo docker compose up --d
+sudo docker compose up -d
 ```
-
