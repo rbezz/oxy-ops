@@ -55,11 +55,11 @@ sudo rpm -vi filebeat-8.4.2-x86_64.rpm
 ```
 #### Reemplazar el archivo filebeat.yml
 ```
-sudo cp oxy-ops/filebeat_conf/filebeat.yml /etc/filebeat/filebeat.yml
+sudo mv oxy-ops/filebeat_conf/filebeat.yml /etc/filebeat/
 ```
-#### Copiar el certificado 
+#### Mover el certificado logstash-remote.crt a /etc/filebeat
 ```
-sudo cp oxy-ops/filebeat_conf/logstash-remote.crt /etc/filebeat/logstash-remote.crt
+sudo mv oxy-ops/filebeat_conf/logstash-remote.crt /etc/filebeat/logstash-remote.crt
 ```
 #### Test de configuración de Filebeat y conexión con Logstash
 ```
@@ -70,4 +70,12 @@ sudo filebeat test output
 ```
 sudo systemctl enable filebeat
 sudo service filebeat start
+```
+### Creación y configuración de usuario docker 
+```
+sudo addgroup --gid 2000 oxyops
+sudo adduser --system --no-create-home --uid 2000 --disabled-password --disabled-login --gid 2000 oxyops
+sudo mkdir -vp /data/
+sudo chmod 770 -R /data
+sudo chown oxyops:oxyops -R /data
 ```
