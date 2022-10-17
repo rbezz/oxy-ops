@@ -37,3 +37,13 @@ echo \
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
+#### Instalación de Filebeat Linux DEB
+```
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.4.2-amd64.deb
+sudo dpkg -i filebeat-8.4.2-amd64.deb
+```
+#### Instalación de Filebeat Linux RPM
+```
+curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.4.2-x86_64.rpm
+sudo rpm -vi filebeat-8.4.2-x86_64.rpm
+```
