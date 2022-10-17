@@ -9,13 +9,6 @@ filebeat.inputs:
       - /data/mailoney/log/*
 
 - type: log
-  id: Ddospot
-  fields:
-     document_type: Ddospot
-  paths:
-     - /data/ddospot/log/dnspot.log
-
-- type: log
   id: Cowrie
   fields:
      document_type: Cowrie
