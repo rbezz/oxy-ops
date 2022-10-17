@@ -1,0 +1,16 @@
+version: '2.3'
+
+services:
+# Cowrie service
+  cowrie:
+    build: cowrie/.
+    image: "dtagdevsec/cowrie:2204"
+# ElasticPot service
+  elasticpot:
+    build: elasticpot/.
+    image: "dtagdevsec/elasticpot:2204"
+
+# Mailoney service
+  mailoney:
+    build: mailoney/.
+    image: "dtagdevsec/mailoney:2204"
