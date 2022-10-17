@@ -1,6 +1,5 @@
 ![](https://www.oxyops.live/wp-content/uploads/2022/10/LOGO-HONEYPOT.png)
-# oxy-ops
-Tesis Red Nacional de Honeypot OXYOPS
+Red de Honeypot para la detección de eventos del ciberespacio del Paraguay.
 ## Requisitos del sistema
 La instalación pueder ser realizada en hardware real, en una máquina virtual o en la nube. 
 Obs: Se recomienda desplegar el sensor aislado del entorno de producción.
