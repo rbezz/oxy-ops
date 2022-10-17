@@ -79,3 +79,34 @@ sudo mkdir -vp /data/
 sudo chmod 770 -R /data
 sudo chown oxyops:oxyops -R /data
 ```
+## Instalación de honeypot
+### Instalación de todos los honeypot
+```
+cd /oxy-ops/docker
+sudo docker compose up --build
+```
+Una vez terminada la construcción del contenedor de deberá detener la misma con el Ctrl + C y actualizar los permisos: 
+```
+sudo chmod 770 -R /data
+sudo chown oxyops:oxyops -R /data
+```
+Nuevamente se deberá ejecutar el comando docker compose up - d, la opción -d indica que se ejecutará como demonio:
+```
+sudo docker compose up --d
+```
+### Instalación de honeypot (si no desea instalar todos los sensores)
+Se deberá acceder al directorio del honeypot, por ejemplo:
+```
+cd /oxy-ops/docker/cowrie
+sudo docker compose up --build
+```
+Una vez terminada la construcción del contenedor de deberá detener la misma con el Ctrl + C y actualizar los permisos: 
+```
+sudo chmod 770 -R /data
+sudo chown oxyops:oxyops -R /data
+```
+Nuevamente se deberá ejecutar el comando docker compose up - d, la opción -d indica que se ejecutará como demonio:
+```
+sudo docker compose up --d
+```
+
