@@ -85,7 +85,7 @@ sudo chown oxyops:oxyops -R /data
 cd /oxy-ops/docker
 sudo docker compose up --build
 ```
-Una vez terminada la construcción del contenedor de deberá detener la misma con el Ctrl + C y actualizar los permisos: 
+Una vez terminada la construcción del contenedor de deberá detener la misma con Ctrl + C y actualizar los permisos: 
 ```
 sudo chmod 770 -R /data
 sudo chown oxyops:oxyops -R /data
@@ -100,7 +100,7 @@ Se deberá acceder al directorio del honeypot, por ejemplo:
 cd /oxy-ops/docker/cowrie
 sudo docker compose up --build
 ```
-Una vez terminada la construcción del contenedor de deberá detener la misma con el Ctrl + C y actualizar los permisos: 
+Una vez terminada la construcción del contenedor de deberá detener la misma con Ctrl + C y actualizar los permisos: 
 ```
 sudo chmod 770 -R /data
 sudo chown oxyops:oxyops -R /data
