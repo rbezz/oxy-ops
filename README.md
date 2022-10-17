@@ -83,6 +83,11 @@ sudo mkdir -vp /data/
 sudo chmod 770 -R /data
 sudo chown oxyops:oxyops -R /data
 ```
+### Cambiar el puerto SSH del sistema host (Descomentar y cambiar el puerto predeterminado. Ej: Port 2224)
+```
+sudo nano /etc/ssh/sshd_config
+sudo service ssh reload
+```
 ## Instalación de honeypot
 ### Instalación de todos los honeypot
 ```
