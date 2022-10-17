@@ -1,0 +1,72 @@
+###################### Filebeat Configuration OXYOPS #########################
+# ============================== Filebeat inputs ===============================
+filebeat.inputs:
+- type: log
+  id: Mailoney
+  fields:
+     document_type: Mailoney
+  paths:
+      - /data/mailoney/log/*
+
+- type: log
+  id: Ddospot
+  fields:
+     document_type: Ddospot
+  paths:
+     - /data/ddospot/log/dnspot.log
+
+- type: log
+  id: Cowrie
+  fields:
+     document_type: Cowrie
+  paths:
+      - /data/cowrie/log/cowrie.json
+
+- type: log
+  id: Elasticpot
+  fields:
+     document_type: Elasticpot
+  paths:
+      - /data/elasticpot/log/elasticpot.json
+      
+# ============================== Filebeat modules ==============================
+
+filebeat.config.modules:
+  # Glob pattern for configuration loading
+  path: ${path.config}/modules.d/*.yml
+
+  # Set to true to enable config reloading
+  reload.enabled: false
+
+  # Period on which files under path should be checked for changes
+  #reload.period: 10s
+
+# ======================= Elasticsearch template setting =======================
+
+setup.template.settings:
+  index.number_of_shards: 1
+  #index.codec: best_compression
+  #_source.enabled: false
+      
+# ------------------------------ Logstash Output -------------------------------
+output.logstash:
+  # The Logstash hosts
+  hosts: ["185.193.17.203:64290"]
+
+  # Optional SSL. By default is off.
+  # List of root certificates for HTTPS server verifications
+  ssl.certificate_authorities: ["/etc/filebeat/logstash-remote.crt"]
+  pipeline: geoip-info
+  # Certificate for SSL client authentication
+  #ssl.certificate: "/etc/pki/client/cert.pem"
+
+  # Client Certificate Key
+  #ssl.key: "/etc/pki/client/cert.key"
+  
+  # ================================= Processors =================================
+processors:
+  - add_host_metadata:
+      when.not.contains.tags: forwarded
+  - add_cloud_metadata: ~
+  - add_docker_metadata: ~
+  - add_kubernetes_metadata: ~
