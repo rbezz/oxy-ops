@@ -5,7 +5,7 @@ Red de Honeypot para la detección de eventos del ciberespacio del Paraguay.
 Los sensores honeypot albergarán sistemas vulnerables y transmitirán los datos de registro al servidor honeypot a través de Filebeat. Estos sensores pueden ser desplegados en cualquiera de las distribuciones Linux disponibles.
 
 ## Requisitos del sistema
-La instalación pueder ser realizada en hardware real, en una máquina virtual o en la nube. 
+La instalación puede ser realizada en hardware real, en una máquina virtual o en la nube. 
 Obs: Se recomienda desplegar el sensor aislado del entorno de producción.
 ### Requisitos mínimos
 - RAM: 500MB
