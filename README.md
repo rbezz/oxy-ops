@@ -119,7 +119,7 @@ Nuevamente se deberá ejecutar el comando docker compose up - d, la opción -d i
 sudo docker compose up -d
 ```
 ### Configuración del firewall o router
-Por el despliegue de cada honeypot se deberán habilitar los puertos correspondientes a cada servicio, esta configuración dependerá de su firewal o router:
+Por el despliegue de cada honeypot se deberán habilitar los puertos correspondientes a cada servicio, esta configuración dependerá de su firewall o router:
 - Cowrie: habilitar puerto 22 y 23 y redirigir a la ip del sensor puerto 2222 y 2323.
 - Elasticpot: habilitar puerto 9200 y redirigir a la ip del sensor puerto 9200.
 - Mailoney: habilitar puerto 25 y redirigir a la ip del sensor puerto 2525.
